@@ -22,3 +22,12 @@ function factorial(number) {
 }
 let number = 5
 console.log(factorial(number));
+
+let a = 1
+let b = 4
+let c = 9
+function combineDigits(a,b,c){
+    return Number(`${a}${b}${c}`)
+}
+let combNumb = combineDigits(a,b,c)
+console.log(combNumb)
