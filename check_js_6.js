@@ -47,3 +47,18 @@ function calculateArea(length, width) {
 
 let result = calculateArea(l, w);
 console.log(result);
+
+
+function isPerfectNumber(number) {
+    let sumOfDivisors = 0;
+    for (let i = 1; i < number; i++) {
+        if (number % i === 0) {
+            sumOfDivisors += i;
+        }
+    }
+    return sumOfDivisors === number;
+}
+
+let number1 = 28;
+let isPerfect = isPerfectNumber(number1);
+console.log(isPerfect);
