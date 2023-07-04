@@ -26,8 +26,24 @@ console.log(factorial(number));
 let a = 1
 let b = 4
 let c = 9
-function combineDigits(a,b,c){
+function combineDigits(a, b, c) {
     return Number(`${a}${b}${c}`)
 }
-let combNumb = combineDigits(a,b,c)
+let combNumb = combineDigits(a, b, c)
 console.log(combNumb)
+
+let l = +prompt("Enter the length");
+let w = +prompt("Enter the width");
+
+function calculateArea(length, width) {
+    let area = 0;
+    if (typeof width === undefined) {
+        area = length * 4;
+    } else {
+        area = length * width;
+    }
+    return area;
+}
+
+let result = calculateArea(l, w);
+console.log(result);
