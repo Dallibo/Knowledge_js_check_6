@@ -62,7 +62,7 @@ function isPerfectNumber(number) {
 let number1 = 28;
 let isPerfect = isPerfectNumber(number1);
 console.log(isPerfect);
- 
+
 
 function findPerfectNumbers(min, max) {
     for (let number = min; number <= max; number++) {
@@ -75,3 +75,31 @@ function findPerfectNumbers(min, max) {
 let min = 1;
 let max = 10000;
 findPerfectNumbers(min, max);
+
+
+let hours = +prompt("Введите часы:");
+let minutes = +prompt("Введите минуты:");
+let seconds = +prompt("Введите секунды:");
+function formatTime(hours, minutes, seconds) {
+    if (minutes === undefined) {
+      minutes = 0;
+    } else {
+      minutes = String(minutes).padStart(2, "0");
+    }
+    if (seconds === undefined) {
+      seconds = 0;
+    } else {
+      seconds = String(seconds).padStart(2, "0");
+    }
+    return hours + ":" + minutes + ":" + seconds;
+  }
+let formattedTime = formatTime(hours, minutes, seconds);
+alert(`Время: ${formattedTime}`);
+
+function timeToSeconds(hours, minutes, seconds) {
+    const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+    return totalSeconds;
+}
+
+let result4 = timeToSeconds(hours, minutes, seconds);
+console.log(`Всего секунд: ${result4}`);
