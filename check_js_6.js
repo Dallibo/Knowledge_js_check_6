@@ -62,3 +62,16 @@ function isPerfectNumber(number) {
 let number1 = 28;
 let isPerfect = isPerfectNumber(number1);
 console.log(isPerfect);
+ 
+
+function findPerfectNumbers(min, max) {
+    for (let number = min; number <= max; number++) {
+        if (isPerfectNumber(number)) {
+            console.log(number);
+        }
+    }
+}
+
+let min = 1;
+let max = 10000;
+findPerfectNumbers(min, max);
